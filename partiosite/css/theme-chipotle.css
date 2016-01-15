@@ -296,8 +296,9 @@ p.text-white a {
     line-height: 24px;
   }
 }
+/*
 #over {
-    background-image: url("../img/blackiphone.png");
+    background-image: url("../img/blackiphone2.png");
     background-repeat: no-repeat;
     height: 800px;
     width: auto;
@@ -307,6 +308,7 @@ p.text-white a {
     margin-bottom:-50px;
     margin-top:-40px;
 }
+*/
 
 iframe {
   border:none;
@@ -922,7 +924,7 @@ nav a {
   color: #666;
 }
 nav .logo {
-  max-height: 2.5vw;
+  max-height: 30px;
   transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -4066,7 +4068,7 @@ footer .container {
   background: rgba(255, 255, 255, 0.2);
 }
 .footer-4 img {
-  max-height: 17px;
+  max-height: 30px;
   margin-bottom: 20px;
 }
 @media all and (max-width: 767px) {
