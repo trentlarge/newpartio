@@ -14,11 +14,22 @@
     
 }
 
+@media screen and (max-width: 768px) {
+    
+    .meet-our-team, 
+    .meet-our-team-menu-button,
+    .demo
+    {
+        display: none;
+    }
+    
+}
+
 /* APP LINKS */
 
 img.app-button {
     margin-top: 25px;
-    margin-bottom: 25px;
+/*    margin-bottom: 25px;*/
 }
 
 /* How it Works */
@@ -27,10 +38,12 @@ img.app-button {
     background-color: #F7F7F7;
 }
 
-.demo {
-    display: flex;
-    display: -webkit-flex;
-    -webkit-justify-content: center;
+@media screen and (min-width: 769px) {
+    .demo {
+        display: flex;
+        display: -webkit-flex;
+        -webkit-justify-content: center;
+    }
 }
 
 iframe {
