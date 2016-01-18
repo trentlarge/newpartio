@@ -7,6 +7,41 @@ $(document).ready(function() {
 	var triggerVid;
 	var launchkit_hoverGallery;
 
+    // gif scripts
+    
+    $('.scan-product').click(function() {
+        $("#gifDemo").attr("src","img/gifs/search.gif");
+    });
+    
+    $('.set-price').click(function() {
+        $("#gifDemo").attr("src","img/gifs/setPrice.gif");
+    });
+    
+    $('.allow-renting').click(function() {
+        $("#gifDemo").attr("src","img/gifs/allowRenting.gif");
+    });
+    
+    $('.request').click(function() {
+        $("#gifDemo").attr("src","img/gifs/request.gif");
+    });
+    
+    $('.get-paid').click(function() {
+        $("#gifDemo").attr("src","img/gifs/getPaid.gif");
+    });
+    
+    $('.map').click(function() {
+        $("#gifDemo").attr("src","img/gifs/map.gif");
+    });
+    
+    $('.inventory').click(function() {
+        $("#gifDemo").attr("src","img/gifs/inventory.gif");
+    });
+    
+     $('.login').click(function() {
+        $("#gifDemo").attr("src","img/gifs/login.gif");
+    });
+    
+    
 
     // Disable default click on a with blank href
 

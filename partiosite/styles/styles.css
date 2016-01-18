@@ -21,10 +21,16 @@ img.app-button {
     margin-bottom: 25px;
 }
 
-/* DEMO */
+/* How it Works */
 
-.feature.demo {
+.how-it-works {
+    background-color: #F7F7F7;
+}
 
+.demo {
+    display: flex;
+    display: -webkit-flex;
+    -webkit-justify-content: center;
 }
 
 iframe {
@@ -58,12 +64,21 @@ img.avatar {
     border-radius: 50%;
     height: 200px;
     width: 200px;
+    border: 1px solid #272727;
 }
 
 /* MEET OUR TEAM */
 
 .meet-our-team {
     padding: 0;
+}
+
+.team-name {
+    font-size: 24px;
+}
+
+.team-description {
+    font-size: 11px;
 }
 
 /* FOOTER */
