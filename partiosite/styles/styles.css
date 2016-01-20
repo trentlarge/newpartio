@@ -94,6 +94,15 @@ img.avatar {
     font-size: 11px;
 }
 
+.hidden {
+    display: none;
+}
+
+.show-more {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
 /* FOOTER */
 
 footer {

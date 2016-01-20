@@ -42,7 +42,12 @@ $(document).ready(function() {
     });
     
     
-
+    $('#showMore').click(function() {
+        $('.team-member').removeClass('hidden');
+        $('#showMore').parent().addClass('hidden');
+    });
+    
+    
     // Disable default click on a with blank href
 
     $('a').click(function() {
