@@ -1,53 +1,53 @@
-$(document).ready(function() { 
+$(document).ready(function() {
 
 	"use strict";
 
 	// Variables
-	
+
 	var triggerVid;
 	var launchkit_hoverGallery;
 
     // gif scripts
-    
+
     $('.scan-product').click(function() {
         $("#gifDemo").attr("src","img/gifs/search.gif");
     });
-    
+
     $('.set-price').click(function() {
         $("#gifDemo").attr("src","img/gifs/setPrice.gif");
     });
-    
+
     $('.allow-renting').click(function() {
         $("#gifDemo").attr("src","img/gifs/allowRenting.gif");
     });
-    
+
     $('.request').click(function() {
         $("#gifDemo").attr("src","img/gifs/request.gif");
     });
-    
+
     $('.get-paid').click(function() {
         $("#gifDemo").attr("src","img/gifs/getPaid.gif");
     });
-    
+
     $('.map').click(function() {
         $("#gifDemo").attr("src","img/gifs/map.gif");
     });
-    
+
     $('.inventory').click(function() {
         $("#gifDemo").attr("src","img/gifs/inventory.gif");
     });
-    
+
      $('.login').click(function() {
         $("#gifDemo").attr("src","img/gifs/login.gif");
     });
-    
-    
+
+
     $('#showMore').click(function() {
         $('.team-member').removeClass('hidden');
         $('#showMore').parent().addClass('hidden');
     });
-    
-    
+
+
     // Disable default click on a with blank href
 
     $('a').click(function() {
@@ -55,25 +55,25 @@ $(document).ready(function() {
             return false;
         }
     });
-    
+
     // Smooth scroll to inner links
-	
+
 	$('.inner-link').smoothScroll({
 		offset: -59,
 		speed: 800
 	});
-	
+
 	// Close mobile menu once link is clicked
-	
+
 	$('.menu li a').click(function(){
 		if($('nav').hasClass('nav-open')){
 			$('nav').removeClass('nav-open');
 		}
 	});
 
-    
+
     // Set bg of nav container if dark skin
-    
+
     if($('nav').hasClass('dark')){
     	$('.nav-container').addClass('dark');
     	$('.main-container').find('section:nth-of-type(1)').css('outline', '40px solid #222');
@@ -89,13 +89,13 @@ $(document).ready(function() {
     });
 
     if(!$('nav').hasClass('fixed') && !$('nav').hasClass('overlay')){
-           
+
         // Compensate the height of parallax element for inline nav
-        
+
         if($(window).width() > 768){
             $('.parallax:first-child .background-image-holder').css('top', -($('nav').outerHeight(true)));
         }
-        
+
         // Adjust fullscreen elements
         if($(window).width() > 768 && ($('section.parallax:first-child, header.parallax:first-child').outerHeight() == $(window).height()) ){
             $('section.parallax:first-child, header.parallax:first-child').css('height', ($(window).height() - $('nav').outerHeight(true)));
@@ -128,9 +128,9 @@ $(document).ready(function() {
         $(this).children('img').hide();
         $(this).css('background-position', '50% 50%');
     });
-    
+
     // Fade in background images
-	
+
 	setTimeout(function(){
 		$('.background-image-holder').each(function() {
 			$(this).addClass('fadeIn');
@@ -192,21 +192,21 @@ $(document).ready(function() {
     	var that = $(this);
     	var timerId = setInterval(function(){scrollHoverGallery(that);}, $(this).closest('.hover-gallery').attr('speed'));
 		$(this).closest('.hover-gallery').attr('timerId', timerId );
-		
+
 		$(this).find('li').bind('hover, mouseover, mouseenter, click', function(e){
 			e.stopPropagation();
 			clearInterval(timerId);
 		});
-	
+
 	});
-	
+
 
     $('.hover-gallery li').mouseenter(function() {
         clearInterval($(this).closest('.hover-gallery[timerId]').attr('timerId'));
         $(this).parent().find('li.active').removeClass('active');
         $(this).addClass('active');
     });
-    
+
     // Pricing table remove emphasis on hover
 
     $('.pricing-option').mouseenter(function() {
@@ -257,13 +257,13 @@ $(document).ready(function() {
             query: $(this).attr('data-user-name')
         });
     });
-    
+
     // Sort tabs into 2 ul's
-    
+
     $('.tabbed-content').each(function(){
     	$(this).append('<ul class="content"></ul>');
     });
-    
+
     $('.tabs li').each(function(){
     	var originalTab = $(this), activeClass = "";
     	if(originalTab.is('.tabs li:first-child')){
@@ -272,7 +272,7 @@ $(document).ready(function() {
     	var tabContent = originalTab.find('.tab-content').detach().wrap('<li'+activeClass+'></li>').parent();
     	originalTab.closest('.tabbed-content').find('.content').append(tabContent);
     });
-    
+
     $('.tabs li').click(function(){
     	$(this).closest('.tabs').find('li').removeClass('active');
     	$(this).addClass('active');
@@ -281,11 +281,11 @@ $(document).ready(function() {
     	$(this).closest('.tabbed-content').find('.content li:nth-child('+liIndex+')').addClass('active');
     });
 
-    
+
     // Contact form code
 
     $('form.form-email').submit(function(e) {
-       
+
         // return false so form submits through jQuery rather than reloading page.
         if (e.preventDefault) e.preventDefault();
         else e.returnValue = false;
@@ -297,14 +297,14 @@ $(document).ready(function() {
 
 		// Mailchimp/Campaign Monitor Mail List Form Scripts
 		iFrame = $(thisForm).find('iframe.mail-list-form');
-		
+
         thisForm.find('.form-error, .form-success').remove();
         thisForm.append('<div class="form-error" style="display: none;">' + thisForm.attr('data-error') + '</div>');
         thisForm.append('<div class="form-success" style="display: none;">' + thisForm.attr('data-success') + '</div>');
 
 
 		if( (iFrame.length) && (typeof iFrame.attr('srcdoc') !== "undefined") && (iFrame.attr('srcdoc') !== "") ){
-				
+
 			console.log('Mail list form signup detected.');
             userEmail = $(thisForm).find('.signup-email-field').val();
             userFullName = $(thisForm).find('.signup-name-field').val();
@@ -322,7 +322,7 @@ $(document).ready(function() {
 				console.log(userLastName);
 				console.log(userFirstName);
 				console.log(userFullName);
-				
+
 				iFrame.contents().find('#mce-EMAIL, #fieldEmail').val(userEmail);
 				iFrame.contents().find('#mce-LNAME, #fieldLastName').val(userLastName);
 				iFrame.contents().find('#mce-FNAME, #fieldFirstName').val(userFirstName);
@@ -384,7 +384,7 @@ $(document).ready(function() {
 								thisForm.find('input[type="text"]').val("");
                                 thisForm.find('textarea').val("");
                                 thisForm.find('.form-success').fadeIn(1000);
-								
+
                                 thisForm.find('.form-error').fadeOut(1000);
 								setTimeout(function() {
 									thisForm.find('.form-success').fadeOut(500);
@@ -417,7 +417,7 @@ $(document).ready(function() {
 
     // End Contact Form Code
 
-    // Get referrer from URL string 
+    // Get referrer from URL string
     if (getURLParameter("ref")) {
         $('form.form-email').append('<input type="text" name="referrer" class="hidden" value="' + getURLParameter("ref") + '"/>');
     }
@@ -426,7 +426,7 @@ $(document).ready(function() {
         return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [, ""])[1].replace(/\+/g, '%20')) || null;
     }
 
-   
+
 
     $('.validate-required, .validate-email').on('blur change', function() {
         validateFields($(this).closest('form'));
@@ -473,23 +473,23 @@ $(document).ready(function() {
 
         return error;
     }
-    
+
     // Remove screen when user clicks on the map, then add it again when they scroll
-    
+
     $('.screen').click(function(){
     	$(this).removeClass('screen');
     });
-    
+
     $(window).scroll(function(){
     	$('.contact-2 .map-holder').addClass('screen');
     });
 
-}); 
+});
 
-$(window).load(function() { 
+$(window).load(function() {
 
 	"use strict";
-	
+
 	// Sticky nav
 
     if (!$('nav').hasClass('overlay')) {
@@ -533,7 +533,7 @@ $(window).load(function() {
         }
     }, 500);
 
-}); 
+});
 
 function scrollHoverGallery(gallery){
 	var nextActiveSlide = $(gallery).find('li.active').next();

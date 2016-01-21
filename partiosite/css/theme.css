@@ -450,8 +450,8 @@ input[type="submit"] {
   height: 54px;
   line-height: 48px;
   text-align: center;
-  background: #6dc77a;
-  border: 1px solid #6dc77a;
+  background: #f2a057;
+  border: 1px solid #f2a057;
   font-size: 18px;
   font-weight: 300;
   padding: 0 36px;
@@ -461,7 +461,7 @@ input[type="submit"] {
   color: #fff;
 }
 input[type="submit"]:hover {
-  background: #5bc069;
+  background: #f0933f;
   color: #fff;
 }
 input:focus,
@@ -3680,7 +3680,7 @@ nav.dismiss-active {
 .contact-1 .map-holder:before {
   position: absolute;
   content: '';
-  background: #6dc77a;
+  background: #f2a057;
   top: 0;
   left: 0;
   width: 100%;

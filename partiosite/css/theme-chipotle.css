@@ -24,6 +24,11 @@
  20. Footers
 
 /*!---------- GLOBAL STYLES ----------*/
+.img-circle {
+    border-radius: 50%;
+    height:150px;
+
+}
 body {
   background: #eee;
   -webkit-backface-visibility: hidden;
@@ -2511,11 +2516,11 @@ nav.dismiss-active {
 }
 .features-15 .feature {
   padding: 80px 53.33333333px;
-  background: #f2a057;
+  background: #E16A00;
   transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
-  border: 1px solid #f2a057;
+  border: 1px solid #F28728;
 }
 .features-15 .feature:hover {
   transform: scale(1.05);
@@ -2524,10 +2529,10 @@ nav.dismiss-active {
   box-shadow: 0 2px 5px 0 rgba(242, 160, 87, 0.26);
 }
 .features-15 .feature:nth-of-type(2) {
-  background: #f4ad6f;
+  background: #F28728;
 }
 .features-15 .feature:nth-of-type(3) {
-  background: #f6bb86;
+  background: #ed9529;
 }
 .features-15 i {
   color: #f7c89e;
