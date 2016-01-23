@@ -32,4 +32,4 @@ Partio website
 
 #logs
 - ssh root@159.203.160.196
-- docker-compose logs -f newpartio_site_1
+- docker-compose logs -f newpartio_website_1
