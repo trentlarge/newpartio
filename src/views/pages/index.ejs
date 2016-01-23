@@ -577,7 +577,7 @@
 		<script>
 			$(document).ready(function(){
 				<% if (_user) { %>
-					sweetAlert("Success", "Welcome <%= _user %>. Let's Partio!", "success");
+					sweetAlert("Success", "Welcome, <%= _user %>. Let's Partio!", "success");
 				<% } else { %>
 					sweetAlert("Oops...", "Something went wrong! Your token is invalid.", "error");
 				<% } %>
