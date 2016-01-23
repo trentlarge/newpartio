@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<% include ../partials/head %>
+</head>
+<body>
+	<title><%= title %></title>
+	<% include ../partials/header %>
+
+	<section class="contact contact-1 hidden-xs">
+		<div class="map-holder">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3227.7722888137637!2d-78.94042264919217!3d36.0014301198544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89ace6b201eb327f%3A0xb21f1655ee1ca38d!2sDuke+University!5e0!3m2!1sen!2sus!4v1453330571028"></iframe>
+		</div>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 text-center">
+					<h2 class="text-white">We're located in Durham, North Carolina</h2>
+					<h5 class="text-white">Our headquarters for crafting the future of e-Commerce</h5>
+				</div>
+			</div>
+		</div>
+
+		<div class="map-toggle">
+			<div class="switch"></div>
+			<h6 class="text-white">Toggle Map</h6>
+		</div>
+	</section>
+
+	<section class="contact contact-3">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 text-center">
+					<h3>Get In Touch</h3>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+					<form class="form-email" data-success="Thanks for your submission, we will be in touch shortly." data-error="Please fill all fields correctly." success-redirect="support@partioapp.com">
+						<input type="text" name="name" class="signup-name-field validate-required" placeholder="Your Name">
+						<input type="text" name="email" class="validate-required validate-email signup-email-field" placeholder="Email Address">
+						<textarea rows="4" name="message" class="validate-required" placeholder="Your Message"></textarea>
+						<input type="submit" value="Submit Enquiry »">
+						<p class="sub">
+							* We don’t share your personal info with anyone. Check out our <a href="privacy.html"> Privacy Policy</a> for more information.
+						</p>
+						<iframe srcdoc="" class="mail-list-form">
+						</iframe>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>	
+
+	<% include ../partials/footer %>
+
+	<script>
+	$(document).ready(function(){
+		$('[href="#home"]').click(function(e){
+			e.preventDefault();
+			window.location = "/";
+		})
+	})
+	</script>
+</body>
+</html>

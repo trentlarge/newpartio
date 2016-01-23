@@ -1,0 +1,11 @@
+partionode:
+  build: .
+  ports:
+    - 80:80
+  volumes:
+    - ./src:/app
+  environment:
+    PORT: 80
+    MONGO_URL: 'mongodb://partio:zpartio2016#@45.55.195.172:27017/partioapp'
+  restart: always
+  entrypoint: ~/install.sh
