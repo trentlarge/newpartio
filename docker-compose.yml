@@ -1,7 +1,7 @@
-partionode:
+website:
   build: .
   ports:
-    - 80:80
+    - 85:80
   volumes:
     - ./src:/app
   environment:
