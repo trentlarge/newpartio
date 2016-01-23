@@ -24,7 +24,7 @@ Partio website
 ## update new code and restart container
 
 - ssh root@159.203.160.196
-- cd ~/partionode
+- cd ~/newpartio
 - git pull origin master
 - docker-compose up -d --force-recreate
 
@@ -32,4 +32,4 @@ Partio website
 
 #logs
 - ssh root@159.203.160.196
-- docker-compose logs -f partionode_partionode_1
+- docker-compose logs -f newpartio_site_1
