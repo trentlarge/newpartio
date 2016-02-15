@@ -9,7 +9,7 @@ var bodyParser = require('body-parser');
 
 var MongoClient = require('mongodb').MongoClient;
 var mongoUrl = process.env.MONGO_URL;
-var server_port = process.env.PORT;
+var server_port = 8080;//process.env.PORT;
 
 if(mongoUrl){
 	MongoClient.connect(mongoUrl, function(err, db) {
@@ -43,6 +43,11 @@ app.use('/', express.static(__dirname + '/public'));
 // index page 
 app.get('/', function(req, res) {
 	res.render('pages/index', { title: 'partiO | the social marketplace to monetize your personal inventory', tryValidate: false });
+});
+
+// team
+app.get('/team', function(req, res) {
+	res.render('pages/team', { title: 'partiO | meet the team', tryValidate: false });
 });
 
 //contact

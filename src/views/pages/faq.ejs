@@ -9,7 +9,7 @@
 
 	<section class="header header-11 overlay fixed-header parallax">
 
-		<div class="background-image-holder parallax">
+		<div class="background-image-holder parallax faq-top-image">
 			<img alt="Background Image" class="background-image parallax" src="/img/hike.jpg">
 		</div>
 
@@ -93,7 +93,27 @@
 		$('[href="#home"]').click(function(e){
 			e.preventDefault();
 			window.location = "/";
-		})
+		});
+        
+        $('[href="#testimonials"]').click(function(e){
+			e.preventDefault();
+			window.location = "/#testimonials";
+		});
+        
+        $('[href="#who-are-we"]').click(function(e){
+			e.preventDefault();
+			window.location = "/#who-are-we";
+		});
+        
+        $('[href="#how-does-it-work"]').click(function(e){
+			e.preventDefault();
+			window.location = "/#how-does-it-work";
+		});
+        
+        $('[href="#download-now"]').click(function(e){
+			e.preventDefault();
+			window.location = "/#download-now";
+		});
 	})
 	</script>
 </body>

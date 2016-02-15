@@ -16,10 +16,7 @@
 
 @media screen and (max-width: 768px) {
 
-    .meet-our-team,
-    .meet-our-team-menu-button,
-    .demo
-    {
+    .demo {
         display: none;
     }
 
@@ -63,35 +60,77 @@ iframe {
 
 /* REVIEW */
 
-.item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.reviews {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
 }
 
 .caption {
-    margin-top: 15px;
-    color: #272727;
+    font-size: 20px;
 }
 
-span.person-name {
+.person-name {    
     display: block;
-    margin-top: 10px;
-    padding-left: 10px;
-    color: #272727;
+    text-align: center;
+    padding-top: 10px;
 }
 
-img.avatar {
+.slider-nav .slick-slide img {
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+    width: 100%;
     border-radius: 50%;
-    height: 200px;
-    width: 200px;
-    border: 1px solid #272727;
+    padding: 10px;
+    opacity: 0;
+    cursor: pointer;
+    transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+}
+
+.slider-nav .slick-slide.slick-active img {
+    opacity: .6;   
+}
+
+.slider-nav .slick-slide.slick-active.slick-center img {
+    -webkit-filter: grayscale(0) !important;
+    filter: grayscale(0) !important;
+    opacity: 1
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #272727;
+}
+
+.footer-4 .social-links li {
+    width: 50%;
+}
+
+/* FAQ */
+
+.parallax.faq-top-image {
+    top: -100px;
 }
 
 /* MEET OUR TEAM */
 
+@media (max-width: 767px) {
+    .header-11 {
+        padding: 160px 0;
+    }
+}
+
+.parallax.team-top-image {
+    top: 0;
+}
+
 .meet-our-team {
     padding: 0;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .team-name {
@@ -111,12 +150,5 @@ img.avatar {
     margin-bottom: 25px;
 }
 
-/* FOOTER */
 
-footer {
-    background-color: #272727;
-}
 
-.footer-4 .social-links li {
-    width: 50%;
-}

@@ -6,7 +6,41 @@ $(document).ready(function() {
 
 	var triggerVid;
 	var launchkit_hoverGallery;
+    
+    // reviews scripts
+    
+    $('.slider-for').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      asNavFor: '.slider-nav'
+    });
+    $('.slider-nav').slick({
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      asNavFor: '.slider-for',
+      dots: true,
+      arrows: false,
+      autoplay: true,
+      autoplaySpeed: 10000,
+      centerMode: true,
+      focusOnSelect: true
+    });
 
+    // $('.left').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+    //   document.getElementById("bar").class = "bar color" + nextSlide;
+    // });
+
+    $('.left').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+      $('.bottom').slick('slickGoTo', nextSlide);
+    });
+
+    $('.bottom').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+      $('.left').slick('slickGoTo', nextSlide);
+      $('.right').slick('slickGoTo', nextSlide);
+    });
+    
+    
     // gif scripts
 
     $('.scan-product').click(function() {
