@@ -26,20 +26,6 @@ $(document).ready(function() {
       centerMode: true,
       focusOnSelect: true
     });
-
-    // $('.left').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
-    //   document.getElementById("bar").class = "bar color" + nextSlide;
-    // });
-
-    $('.left').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
-      $('.bottom').slick('slickGoTo', nextSlide);
-    });
-
-    $('.bottom').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
-      $('.left').slick('slickGoTo', nextSlide);
-      $('.right').slick('slickGoTo', nextSlide);
-    });
-    
     
     // gif scripts
 
