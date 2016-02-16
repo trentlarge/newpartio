@@ -70,7 +70,7 @@ iframe {
     font-size: 20px;
 }
 
-.person-name {    
+.person-name {
     display: block;
     text-align: center;
     padding-top: 10px;
@@ -90,7 +90,7 @@ iframe {
 }
 
 .slider-nav .slick-slide.slick-active img {
-    opacity: .6;   
+    opacity: .6;
 }
 
 .slider-nav .slick-slide.slick-active.slick-center img {
@@ -111,13 +111,13 @@ footer {
 
 /* FAQ */
 
-.parallax.faq-top-image {
+/*.parallax.faq-top-image {
     top: -100px;
-}
+}*/
 
 /* MEET OUR TEAM */
 
-@media (max-width: 767px) {
+/*@media (max-width: 767px) {
     .header-11 {
         padding: 160px 0;
     }
@@ -125,12 +125,12 @@ footer {
 
 .parallax.team-top-image {
     top: 0;
-}
+}*/
 
 .meet-our-team {
     padding: 0;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    /*padding-top: 50px;*/
+    /*padding-bottom: 50px;*/
 }
 
 .team-name {
@@ -149,6 +149,3 @@ footer {
     margin-top: 25px;
     margin-bottom: 25px;
 }
-
-
-
