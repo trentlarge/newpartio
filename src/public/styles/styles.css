@@ -77,6 +77,7 @@ img.app-button {
 
 .testimonials .bg-image-testiomonial {
   background-size: cover !important;
+  background-position: center center !important;
 }
 
 .testimonials .bar0 {
