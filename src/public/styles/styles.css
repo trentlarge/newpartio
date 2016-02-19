@@ -67,12 +67,13 @@ img.app-button {
 .testimonials {
    font-size:20px;
    padding:0;
+   background:#fafafa;
 }
 
 .testimonials .phrase {
-  font-size: 30px;
+  font-size: 15px;
   margin-top: 30px;
-  line-height: 35px;
+  line-height: 25px;
 }
 
 .testimonials .bg-image-testiomonial {
@@ -97,6 +98,11 @@ img.app-button {
   transition: background-color 0.5s ease;
   background-color:#FFA333;
 }
+
+  #bar img {
+    vertical-align: top;
+    min-height: 25px;
+  }
 
 .testimonials .bar3 {
   margin-bottom:-6.5px;
@@ -124,8 +130,8 @@ img.app-button {
 }
 
 .testimonials .bottom.slick-slider {
-  margin:20px 0 20px 0;
-
+    margin: 20px 0 0px 0;
+    height: 100px;
 }
 
 .testimonials  .bottom.slick-slider .slick-slide {
@@ -168,13 +174,17 @@ img.app-button {
 .testimonials cite {
   color:#fff;
   font-family:'Raleway',sans-serif;
-  font-size:17px;
+
   font-style:normal;
   font-weight:600;
   letter-spacing:.015em;
   line-height:2rem;
   text-transform:uppercase;
 }
+
+  .testimonials cite span {
+    font-size:13px;
+  }
 
 .testimonials .cite-position{
   display:block;
@@ -187,9 +197,9 @@ img.app-button {
 }
 
 .testimonials .btn {
+  font-size: 14px;
   text-decoration:none;
   border-radius:30px;
-  font-size:18px;
   line-height:1.7;
   /*padding:10px 16px;*/
   padding:10px 30px;
@@ -199,6 +209,7 @@ img.app-button {
   color:#fff;
   transition:border .2s ease;
   margin-top:0;
+  height: auto;
 }
 
 .testimonials .btn:hover {
@@ -253,11 +264,16 @@ img.app-button {
   border-radius: 50%;
   margin-right: 5px;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+  display:none;
 }
 
 .testimonials .cd-author .cd-author-info {
   text-align: left;
   line-height: 1.2;
+}
+
+.testimonials .cd-author .cd-author-info li {
+  word-wrap: break-word;
 }
 
 .testimonials .cd-author .cd-author-info li:first-child {
@@ -271,7 +287,43 @@ img.app-button {
   color: #6b6b70;
 }
 
-@media only screen and (min-width: 768px) {
+
+
+@media only screen and (min-width: 1170px) {
+  .testimonials .cd-author img {
+    display:initial;
+  }
+
+  .testimonials .phrase {
+    font-size: 30px;
+    line-height: 35px;
+  }
+
+  .testimonials cite span {
+    font-size:17px;
+  }
+
+  .testimonials .btn {
+    font-size:18px !important;
+  }
+}
+
+@media only screen and (min-width: 1000px) and (max-width:1169px) {
+  .testimonials .phrase {
+    font-size: 20px;
+    line-height: 31px;
+  }
+
+  .testimonials .btn {
+    font-size:16px !important;
+  }
+
+  .testimonials cite span {
+    font-size:15px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width:999px) {
   .testimonials .cd-author img {
     width: 50px;
     height: 50px;
@@ -281,15 +333,28 @@ img.app-button {
     line-height: 1.4;
   }
 
-  .testimonials .cd-author .cd-author-info li:first-child {
-    font-size: 16px;
-    /*font-size: 1rem;*/
+  .testimonials .phrase {
+    font-size: 18px;
+    line-height: 28px;
   }
 
-  .testimonials .cd-author .cd-author-info li:last-child {
-    font-size: 14px;
-    /*font-size: 0.875rem;*/
+  .testimonials cite span {
+    font-size:14px;
   }
+
+  .testimonials .btn {
+    font-size:15px !important;
+  }
+
+  /*.testimonials .cd-author .cd-author-info li:first-child {*/
+    /*font-size: 14px;*/
+    /*font-size: 1rem;*/
+  /*}*/
+
+  /*.testimonials .cd-author .cd-author-info li:last-child {*/
+    /*font-size: 12px;*/
+    /*font-size: 0.875rem;*/
+  /*}*/
 }
 
 
