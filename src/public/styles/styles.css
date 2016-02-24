@@ -75,7 +75,7 @@ img.app-button {
 }
 
 .testimonials .phrase {
-  font-size: 15px;
+  font-size: 20px;
   margin-top: 28px;
   line-height: 25px;
 }
@@ -444,9 +444,9 @@ footer {
 
 /* FAQ */
 
-/*.parallax.faq-top-image {
+.parallax.faq-top-image {
     top: -100px;
-}*/
+}
 
 /* MEET OUR TEAM */
 
