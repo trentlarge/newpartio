@@ -111,7 +111,7 @@ app.get('/verify-email/:token', function(req, res) {
 
 	var token = req.params.token;
 
-	Users.findOne({ "services.email.verificationTokens.0.token": token }, function(err, user){
+	Users.findOne({ "services.email.verificationTokens.token": token }, function(err, user){
 		if (err) {
 			console.log(err);
 		}
