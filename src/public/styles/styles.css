@@ -60,6 +60,10 @@ img.app-button {
 
 /* REVIEW */
 
+.testimonials .slick-track {
+    height: 130px;
+}
+
 .no-fouc {
 	display: none;
 }
@@ -71,8 +75,8 @@ img.app-button {
 }
 
 .testimonials .phrase {
-  font-size: 15px;
-  margin-top: 30px;
+  font-size: 20px;
+  margin-top: 28px;
   line-height: 25px;
 }
 
@@ -101,7 +105,7 @@ img.app-button {
 
   #bar img {
     vertical-align: top;
-    min-height: 25px;
+    min-height: 26px;
   }
 
 .testimonials .bar3 {
@@ -130,8 +134,8 @@ img.app-button {
 }
 
 .testimonials .bottom.slick-slider {
-    margin: 20px 0 0px 0;
-    height: 100px;
+    margin: 15px 0 0px 0;
+    height: 130px;
 }
 
 .testimonials  .bottom.slick-slider .slick-slide {
@@ -252,23 +256,36 @@ img.app-button {
   height:100%;
 }
 
-.testimonials .cd-author img, .cd-author .cd-author-info {
+/*
+.testimonials .cd-author img, .cd-author-info {
   display: inline-block;
   vertical-align: middle;
   list-style: none;
 }
+*/
+
+.testimonials .cd-author {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    align-items: center;
+    -webkit-align-items: center;
+    justify-content: center;
+    -webkit-justify-content: center;
+    padding: 0 5px;
+}
 
 .testimonials .cd-author img {
-  width: 32px;
-  height: 32px;
+  margin: 5px 0 10px 0;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  margin-right: 5px;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
-  display:none;
 }
 
 .testimonials .cd-author .cd-author-info {
-  text-align: left;
+  text-align: center;
   line-height: 1.2;
 }
 
@@ -282,20 +299,41 @@ img.app-button {
 }
 
 .testimonials .cd-author .cd-author-info li:last-child {
-  font-size: 12px;
+  font-size: 10px;
   /*font-size: 0.75rem;*/
   color: #6b6b70;
 }
 
+@media only screen and (max-width: 627px) {
+    
+    .testimonials .bottom.slick-slider {
+        height: 150px;
+    }
+    
+    .testimonials .slick-track {
+        height: 150px;
+    }
+    
+}
 
+@media only screen and (max-width: 768px) {
+
+    .testimonials .left {
+      width: 100%;
+      float: left;
+      padding:0 15px 0 15px;
+    }
+
+    .testimonials .right, .slick-next, .slick-prev {
+        display: none !important;
+    }
+    
+}
 
 @media only screen and (min-width: 1170px) {
-  .testimonials .cd-author img {
-    display:initial;
-  }
 
   .testimonials .phrase {
-    font-size: 30px;
+    font-size: 28px;
     line-height: 35px;
   }
 
@@ -324,10 +362,6 @@ img.app-button {
 }
 
 @media only screen and (min-width: 768px) and (max-width:999px) {
-  .testimonials .cd-author img {
-    width: 50px;
-    height: 50px;
-  }
 
   .testimonials .cd-author .cd-author-info {
     line-height: 1.4;
@@ -410,9 +444,9 @@ footer {
 
 /* FAQ */
 
-/*.parallax.faq-top-image {
+.parallax.faq-top-image {
     top: -100px;
-}*/
+}
 
 /* MEET OUR TEAM */
 
