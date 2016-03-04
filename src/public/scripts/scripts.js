@@ -30,38 +30,69 @@ $(document).ready(function() {
     // gif scripts
 
     $('.scan-product').click(function() {
+        showLoader()
         $("#gifDemo").attr("src","/img/gifs/search.gif");
     });
 
     $('.set-price').click(function() {
+        showLoader()
         $("#gifDemo").attr("src","/img/gifs/setPrice.gif");
     });
 
     $('.allow-renting').click(function() {
+        showLoader()
         $("#gifDemo").attr("src","/img/gifs/allowRenting.gif");
     });
 
     $('.request').click(function() {
+        showLoader()
         $("#gifDemo").attr("src","/img/gifs/request.gif");
     });
 
     $('.get-paid').click(function() {
-        $("#gifDemo").attr("src","/img/gifs/getPaid.gif");
+        showLoader()
+        $("#gifDemo").attr("src","/img/gifs/payment.gif");
     });
 
     $('.map').click(function() {
+        showLoader()
         $("#gifDemo").attr("src","/img/gifs/map.gif");
     });
 
     $('.inventory').click(function() {
+        showLoader()
         $("#gifDemo").attr("src","/img/gifs/inventory.gif");
     });
 
      $('.login').click(function() {
+         showLoader()
         $("#gifDemo").attr("src","/img/gifs/login.gif");
     });
 
-
+    $('.chat').click(function() {
+        showLoader()
+        $("#gifDemo").attr("src","/img/gifs/chat.gif");
+    });
+    
+    $('.shoutout').click(function() {
+        showLoader()
+        $("#gifDemo").attr("src","/img/gifs/shoutout.gif");
+    });
+    
+    $('#gifDemo').on('load', function(){
+        setTimeout(function() {
+            $('#loader').hide();
+            $("#gifDemo").show();    
+        }, 100)
+    });
+    
+    function showLoader() {
+        $("#gifDemo").hide();
+        $("#loader").show();
+    }
+    
+    
+    
     $('#showMore').click(function() {
         $('.team-member').removeClass('hidden');
         $('#showMore').parent().addClass('hidden');

@@ -348,6 +348,12 @@
 
 }
 
+/* DEMO */
+
+.features-6 .feature {
+    margin-bottom: 50px !important;   
+}
+
 /* APP LINKS */
 
 img.app-button {
@@ -365,7 +371,11 @@ img.app-button {
     .demo {
         display: flex;
         display: -webkit-flex;
+        justify-content: center;
         -webkit-justify-content: center;
+        align-items: center;
+        -webkit-align-items: center;
+        min-height: 650px
     }
 }
 
