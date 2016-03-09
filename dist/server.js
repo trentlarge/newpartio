@@ -9,7 +9,7 @@ var bodyParser = require('body-parser');
 
 var MongoClient = require('mongodb').MongoClient;
 var mongoUrl = process.env.MONGO_URL;
-var server_port = 8080;//process.env.PORT;
+var server_port = process.env.PORT;
 
 if(mongoUrl){
 	MongoClient.connect(mongoUrl, function(err, db) {
